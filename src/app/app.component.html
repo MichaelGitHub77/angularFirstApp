@@ -1,4 +1,28 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+	kalimat pertama di angular
+	10 + 20 = {{20+10}}
+	<br>
+  {{hasil}}
+	<br>
+	<input type="text" [(ngModel)]="a"/>+<input type="text" [(ngModel)]="b"/>={{a*1+b*1}}
+	<br>
 </p>
+	<div *ngFor="let fruit of item; let i = index">
+		{{i+1}}.{{fruit.nama}} = {{fruit.harga | currency :'Rp.'}} / {{fruit.satuan}}
+	</div>
+	<br>
+	<p *ngIf="tampil">bisa tampil</p>
+
+	<ng-template *ngIf="tampil; then templatetrue; else templatefalse"></ng-template>
+
+	<ng-template #templatetrue>
+		<p>templatetrue</p>
+	</ng-template>
+
+	<ng-template #templatefalse>
+		<p>templatefalse</p>
+	</ng-template>
+
+	<button (click)="OPEN()">Buka</button>{{tulisanOPEN}}
+  <input (keyup)= "onKey($event)"/><p>{{values}}
